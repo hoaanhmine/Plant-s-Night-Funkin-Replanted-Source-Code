@@ -122,6 +122,7 @@ FlxG.android.preventDefaultKeys = [BACK];
 			startIntro();
 		});
 		#end
+        }
 
 
 	var logoBl:FlxSprite;
