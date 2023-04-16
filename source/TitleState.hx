@@ -49,7 +49,11 @@ class TitleState extends MusicBeatState
 	var wackyImage:FlxSprite;
 
 	override public function create():Void
+
 	{
+		#if android
+FlxG.android.preventDefaultKeys = [BACK];
+#end
 		#if polymod
 		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
 		#end
@@ -118,7 +122,7 @@ class TitleState extends MusicBeatState
 			startIntro();
 		});
 		#end
-	}
+
 
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
